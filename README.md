@@ -20,10 +20,20 @@ Android application package: `com.smartqr.scanner`
 - ZXing (`zxing-android-embedded`) for scanner engine
 - Room database for local persistence
 
-## Build
+## Build prerequisites
+- **JDK 17** (not Java 21/25)
+- Android SDK with platform/build-tools for `compileSdk 35`
+- Network access to Gradle repositories (`google()`, `mavenCentral()`)
+
+## Generate APK quickly
+Use the helper script:
+
 ```bash
-./gradlew assembleDebug
+./scripts/build_apk.sh debug
 ```
+
+Output:
+`app/build/outputs/apk/debug/app-debug.apk`
 
 ## Signed APK (Release)
 Set environment variables before build:
@@ -33,11 +43,20 @@ export SMARTQR_KEYSTORE_PATH=/absolute/path/your-release.jks
 export SMARTQR_KEYSTORE_PASSWORD=******
 export SMARTQR_KEY_ALIAS=******
 export SMARTQR_KEY_PASSWORD=******
-./gradlew assembleRelease
+./scripts/build_apk.sh release
 ```
 
-Then locate signed APK at:
+Output:
 `app/build/outputs/apk/release/app-release.apk`
+
+## If `gradlew` is missing
+Create wrapper once in an online environment:
+
+```bash
+JAVA_HOME=<path-to-jdk17> gradle wrapper --gradle-version 8.14.3
+```
+
+Then run `./scripts/build_apk.sh debug`.
 
 ## Play Store readiness checklist
 - Replace placeholder launcher icon with final branded artwork.
