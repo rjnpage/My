@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">स्मार्ट क्यूआर और डेटा स्कैनर</string>
+    <string name="scan_qr">क्यूआर स्कैन करें</string>
+    <string name="generate_qr">क्यूआर बनाएं</string>
+    <string name="history">इतिहास</string>
+    <string name="search">खोजें</string>
+    <string name="delete">हटाएं</string>
+    <string name="export_pdf">पीडीएफ निर्यात</string>
+    <string name="export_txt">टीएक्सटी निर्यात</string>
+    <string name="share">शेयर</string>
+</resources>

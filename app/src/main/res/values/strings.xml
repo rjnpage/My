@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Smart QR &amp; Data Scanner</string>
+    <string name="scan_qr">Scan QR</string>
+    <string name="generate_qr">Generate QR</string>
+    <string name="history">History</string>
+    <string name="search">Search</string>
+    <string name="delete">Delete</string>
+    <string name="export_pdf">Export PDF</string>
+    <string name="export_txt">Export TXT</string>
+    <string name="share">Share</string>
+</resources>
